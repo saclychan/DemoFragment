@@ -14,8 +14,9 @@ import ngocamha.com.demofragment.R;
 
 
 public class HomeFragment extends Fragment implements  View.OnClickListener {
-
+    CatFragment.OnCatFragmentEatListener mOnCatFragmentEatListener;
     FacebookFragment.OnFacebookFragmentActionListener  mFacebookFragment;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -29,6 +30,7 @@ public class HomeFragment extends Fragment implements  View.OnClickListener {
     public void onAttach(Context context) {
         super.onAttach(context);
         mFacebookFragment = (FacebookFragment.OnFacebookFragmentActionListener) context;
+        mOnCatFragmentEatListener  = (CatFragment.OnCatFragmentEatListener) context;
     }
 
     @Override
@@ -52,7 +54,7 @@ public class HomeFragment extends Fragment implements  View.OnClickListener {
                 break;
 
             case R.id.btn2:
-
+                mOnCatFragmentEatListener.onEat();
                 break;
         }
     }

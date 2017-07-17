@@ -36,6 +36,8 @@ public class FacebookFragment extends Fragment {
         return view;
     }
 
+
+    //callback function
     public interface OnFacebookFragmentActionListener{
         void onFacebookSetName();
     }
